@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-header bg-dark text-light">
     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-    <a href="<%= root_url%>" class="btn btn-outline-info btn-sm pull-right">Continue Shopping</a>
+    <a href="<%= root_url%>" class="text-white btn btn-info btn-sm pull-right">Continue Shopping</a>
     <div class="clearfix"></div>
   </div>
   <div class="card-body">
@@ -30,7 +30,7 @@
     <% end %>
   </div>
   <div class="card-footer">
-    <%= link_to 'Pay', pay_with_paypal_cart_path, method: :post, class: 'btn btn-success pull-right' %>
+    <%= link_to 'Pay', pay_with_paypal_cart_path, method: :post, class: 'btn btn-success pull-right text-white' %>
     <div class="pull-right" style="margin: 5px">
       Total: $<b><%= @order.total %></b>
     </div>

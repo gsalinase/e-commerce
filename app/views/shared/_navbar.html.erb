@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+   <%= link_to 'E-comer', root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto d-flex justify-content-end w-100">
+      <% if user_signed_in? %>
+      <li class="nav-item active">
+        <%= link_to 'Products', root_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Cart', cart_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Welcome <%= current_user.email %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to 'Edit Account', edit_user_registration_path, class: 'dropdown-item' %>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'dropdown-item'  %>
+        </div>
+      </li>
+      <% else %>
+      <li class="nav-item mx-3">
+        <%= link_to 'Iniciar Sesión', user_session_path, class: 'text-white btn btn-primary btn-sm' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Regístrate', new_user_registration_path, class: 'text-white btn btn-secondary btn-sm' %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
