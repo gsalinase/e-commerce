@@ -11,7 +11,6 @@ class CartsController < ApplicationController
   end
 
   def show
-    pry
     @order = current_order
   end
 
