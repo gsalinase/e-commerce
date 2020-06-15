@@ -26,8 +26,6 @@ class CartsController < ApplicationController
       }
     )
 
-    pry
-
     # Initialize payment
     Payment.create(
       order_id: current_order.id,
