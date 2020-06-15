@@ -9,7 +9,7 @@ class Category < ApplicationRecord
     return @result if category.parent.nil?
 
     @result << parent
-    get_parents(category.parent)
+    find_parents(category.parent)
   end
 
   # def parents(category = self)

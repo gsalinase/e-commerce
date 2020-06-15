@@ -71,3 +71,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "activemerchant", "~> 1.107"
+
+gem "pry", "~> 0.13.1"
